@@ -1,0 +1,95 @@
+<svg viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Poppins:wght@400;600;700&amp;display=swap');
+      .title  { font-family:"Poppins",sans-serif; font-size:16px; font-weight:700; fill:#ff00ff; }
+      .lang   { font-family:"Poppins",sans-serif; font-size:12px; font-weight:600; fill:#e0e0e0; }
+      .cat    { font-family:"Poppins",sans-serif; font-size:10px; fill:#888; }
+      .sublbl { font-family:"JetBrains Mono",monospace; font-size:9px; fill:#666; }
+    </style>
+    <linearGradient id="bgLg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0014"/><stop offset="100%" style="stop-color:#1a0033"/>
+    </linearGradient>
+    <linearGradient id="lPy"  x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ff00ff"/><stop offset="100%" style="stop-color:#c400ff"/></linearGradient>
+    <linearGradient id="lSql" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="100%" style="stop-color:#0070f3"/></linearGradient>
+    <linearGradient id="lSf"  x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#29b5e8"/><stop offset="100%" style="stop-color:#0055ff"/></linearGradient>
+    <linearGradient id="lAws" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ff9900"/><stop offset="100%" style="stop-color:#ffcc00"/></linearGradient>
+    <linearGradient id="lMat" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ff00ff"/><stop offset="100%" style="stop-color:#ff0080"/></linearGradient>
+    <linearGradient id="lPsp" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#e25a1c"/><stop offset="100%" style="stop-color:#ff7043"/></linearGradient>
+    <linearGradient id="lDb"  x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#ff3621"/><stop offset="100%" style="stop-color:#ff6a00"/></linearGradient>
+    <filter id="glowLg">
+      <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- BG -->
+  <rect width="500" height="360" rx="14" fill="url(#bgLg)" stroke="rgba(255,0,255,0.35)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="498" height="358" rx="14" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="24" y="38" class="title">🛠 Technology Stack</text>
+  <text x="24" y="56" class="cat">Data Engineering · Primary Technologies</text>
+
+  <!-- Bars: x=24 label, x=130 track start, track-width=300, x=438 category label -->
+
+  <!-- Python -->
+  <text x="24"  y="88" class="lang">Python</text>
+  <text x="438" y="88" class="cat" text-anchor="end">Data / ETL</text>
+  <rect x="130" y="76" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="76" width="0"   height="12" rx="6" fill="url(#lPy)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="285" dur="1.1s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- SQL -->
+  <text x="24"  y="122" class="lang">SQL</text>
+  <text x="438" y="122" class="cat" text-anchor="end">Queries / Transforms</text>
+  <rect x="130" y="110" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="110" width="0"   height="12" rx="6" fill="url(#lSql)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="275" dur="1.1s" begin="0.45s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Snowflake -->
+  <text x="24"  y="156" class="lang">Snowflake</text>
+  <text x="438" y="156" class="cat" text-anchor="end">Cloud DWH</text>
+  <rect x="130" y="144" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="144" width="0"   height="12" rx="6" fill="url(#lSf)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="265" dur="1.1s" begin="0.60s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- AWS -->
+  <text x="24"  y="190" class="lang">AWS / S3</text>
+  <text x="438" y="190" class="cat" text-anchor="end">Cloud Infra</text>
+  <rect x="130" y="178" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="178" width="0"   height="12" rx="6" fill="url(#lAws)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="255" dur="1.1s" begin="0.75s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Matillion -->
+  <text x="24"  y="224" class="lang">Matillion</text>
+  <text x="438" y="224" class="cat" text-anchor="end">ETL Orchestration</text>
+  <rect x="130" y="212" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="212" width="0"   height="12" rx="6" fill="url(#lMat)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="245" dur="1.1s" begin="0.90s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- PySpark -->
+  <text x="24"  y="258" class="lang">PySpark</text>
+  <text x="438" y="258" class="cat" text-anchor="end">Big Data</text>
+  <rect x="130" y="246" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="246" width="0"   height="12" rx="6" fill="url(#lPsp)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="220" dur="1.1s" begin="1.05s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Databricks -->
+  <text x="24"  y="292" class="lang">Databricks</text>
+  <text x="438" y="292" class="cat" text-anchor="end">Lakehouse</text>
+  <rect x="130" y="280" width="300" height="12" rx="6" fill="rgba(255,255,255,0.06)"/>
+  <rect x="130" y="280" width="0"   height="12" rx="6" fill="url(#lDb)" filter="url(#glowLg)">
+    <animate attributeName="width" from="0" to="210" dur="1.1s" begin="1.20s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Footer note -->
+  <line x1="24" y1="315" x2="476" y2="315" stroke="rgba(255,0,255,0.12)" stroke-width="1"/>
+  <text x="24"  y="335" class="sublbl">Bar widths reflect relative professional focus — not fabricated percentages.</text>
+  <text x="24"  y="350" class="sublbl">Additional: Docker · Git · GitHub Actions · Jenkins</text>
+</svg>

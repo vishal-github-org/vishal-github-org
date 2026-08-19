@@ -1,0 +1,122 @@
+<svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap');
+      .ttitle { font-family:"Poppins",sans-serif; font-size:15px; font-weight:700; }
+      .tlabel { font-family:"Poppins",sans-serif; font-size:9px; font-weight:600; fill:#e0e0e0; text-anchor:middle; }
+      .tsub   { font-family:"Poppins",sans-serif; font-size:8px; fill:#888; text-anchor:middle; }
+      .trank  { font-family:"Poppins",sans-serif; font-size:11px; font-weight:700; text-anchor:middle; }
+    </style>
+    <linearGradient id="bgTr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0014"/><stop offset="100%" style="stop-color:#1a0033"/>
+    </linearGradient>
+    <!-- cell gradients by rank colour -->
+    <linearGradient id="rankGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe066"/><stop offset="100%" style="stop-color:#ffaa00"/>
+    </linearGradient>
+    <linearGradient id="rankPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e040fb"/><stop offset="100%" style="stop-color:#7b1fa2"/>
+    </linearGradient>
+    <linearGradient id="rankCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00e5ff"/><stop offset="100%" style="stop-color:#0070f3"/>
+    </linearGradient>
+    <linearGradient id="rankGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#69ff47"/><stop offset="100%" style="stop-color:#00b712"/>
+    </linearGradient>
+    <linearGradient id="rankOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9900"/><stop offset="100%" style="stop-color:#e65c00"/>
+    </linearGradient>
+
+    <filter id="cellGlow">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Shine sweep clip -->
+    <clipPath id="cell0clip"><rect x="16"  y="55" width="120" height="150" rx="10"/></clipPath>
+    <clipPath id="cell1clip"><rect x="152" y="55" width="120" height="150" rx="10"/></clipPath>
+    <clipPath id="cell2clip"><rect x="288" y="55" width="120" height="150" rx="10"/></clipPath>
+    <clipPath id="cell3clip"><rect x="424" y="55" width="120" height="150" rx="10"/></clipPath>
+    <clipPath id="cell4clip"><rect x="560" y="55" width="184" height="150" rx="10"/></clipPath>
+  </defs>
+
+  <!-- BG -->
+  <rect width="760" height="220" rx="14" fill="url(#bgTr)" stroke="rgba(255,0,255,0.35)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="758" height="218" rx="14" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Section title -->
+  <text x="24" y="38" class="ttitle" fill="#ff00ff">🏆 Achievements</text>
+
+  <!-- ─── CELL 0: AWS Certified ─── -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
+    <rect x="16" y="55" width="120" height="150" rx="10" fill="rgba(255,153,0,0.08)" stroke="rgba(255,153,0,0.45)" stroke-width="1.5"/>
+    <!-- icon -->
+    <text x="76" y="102" text-anchor="middle" style="font-size:28px;">☁️</text>
+    <!-- rank badge -->
+    <rect x="48" y="108" width="56" height="18" rx="9" fill="url(#rankOrange)" filter="url(#cellGlow)"/>
+    <text x="76" y="121" class="trank" style="fill:#0a0014;">CERT</text>
+    <!-- label -->
+    <text x="76" y="148" class="tlabel">AWS Cloud</text>
+    <text x="76" y="160" class="tlabel">Practitioner</text>
+    <text x="76" y="178" class="tsub">Certified</text>
+    <!-- shine -->
+    <rect x="-60" y="55" width="40" height="150" fill="rgba(255,255,255,0.10)" clip-path="url(#cell0clip)">
+      <animate attributeName="x" from="-60" to="160" dur="2.5s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ─── CELL 1: 50M Rows ─── -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.45s" fill="freeze"/>
+    <rect x="152" y="55" width="120" height="150" rx="10" fill="rgba(224,64,251,0.08)" stroke="rgba(224,64,251,0.45)" stroke-width="1.5"/>
+    <text x="212" y="102" text-anchor="middle" style="font-size:28px;">📊</text>
+    <rect x="184" y="108" width="56" height="18" rx="9" fill="url(#rankPurple)" filter="url(#cellGlow)"/>
+    <text x="212" y="121" class="trank" style="fill:#fff;">S</text>
+    <text x="212" y="148" class="tlabel">50M+ Rows</text>
+    <text x="212" y="160" class="tlabel">Pipeline</text>
+    <text x="212" y="178" class="tsub">Data Scale</text>
+    <rect x="92" y="55" width="40" height="150" fill="rgba(255,255,255,0.10)" clip-path="url(#cell1clip)">
+      <animate attributeName="x" from="92" to="296" dur="2.5s" begin="1.0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ─── CELL 2: 40% Improvement ─── -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.70s" fill="freeze"/>
+    <rect x="288" y="55" width="120" height="150" rx="10" fill="rgba(0,229,255,0.08)" stroke="rgba(0,229,255,0.45)" stroke-width="1.5"/>
+    <text x="348" y="102" text-anchor="middle" style="font-size:28px;">⚡</text>
+    <rect x="320" y="108" width="56" height="18" rx="9" fill="url(#rankCyan)" filter="url(#cellGlow)"/>
+    <text x="348" y="121" class="trank" style="fill:#0a0014;">A+</text>
+    <text x="348" y="148" class="tlabel">40% Perf.</text>
+    <text x="348" y="160" class="tlabel">Improvement</text>
+    <text x="348" y="178" class="tsub">Optimization</text>
+    <rect x="228" y="55" width="40" height="150" fill="rgba(255,255,255,0.10)" clip-path="url(#cell2clip)">
+      <animate attributeName="x" from="228" to="432" dur="2.5s" begin="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ─── CELL 3: Snowflake ETL ─── -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.95s" fill="freeze"/>
+    <rect x="424" y="55" width="120" height="150" rx="10" fill="rgba(41,181,232,0.08)" stroke="rgba(41,181,232,0.45)" stroke-width="1.5"/>
+    <text x="484" y="102" text-anchor="middle" style="font-size:28px;">❄️</text>
+    <rect x="456" y="108" width="56" height="18" rx="9" fill="url(#rankCyan)" filter="url(#cellGlow)"/>
+    <text x="484" y="121" class="trank" style="fill:#0a0014;">ETL</text>
+    <text x="484" y="148" class="tlabel">Snowflake</text>
+    <text x="484" y="160" class="tlabel">Pipelines</text>
+    <text x="484" y="178" class="tsub">Production</text>
+    <rect x="364" y="55" width="40" height="150" fill="rgba(255,255,255,0.10)" clip-path="url(#cell3clip)">
+      <animate attributeName="x" from="364" to="568" dur="2.5s" begin="1.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ─── CELL 4: Nagarro DE (wider) ─── -->
+  <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.20s" fill="freeze"/>
+    <rect x="560" y="55" width="184" height="150" rx="10" fill="rgba(105,255,71,0.06)" stroke="rgba(105,255,71,0.35)" stroke-width="1.5"/>
+    <text x="652" y="102" text-anchor="middle" style="font-size:28px;">🏢</text>
+    <rect x="610" y="108" width="84" height="18" rx="9" fill="url(#rankGreen)" filter="url(#cellGlow)"/>
+    <text x="652" y="121" class="trank" style="fill:#0a0014;">PROFESSIONAL</text>
+    <text x="652" y="148" class="tlabel">Data Engineer</text>
+    <text x="652" y="160" class="tlabel">at Nagarro</text>
+    <text x="652" y="178" class="tsub">Associate Engineer</text>
+    <rect x="500" y="55" width="40" height="150" fill="rgba(255,255,255,0.10)" clip-path="url(#cell4clip)">
+      <animate attributeName="x" from="500" to="764" dur="2.5s" begin="1.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
